@@ -2,13 +2,13 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import indexScreen from "./src/screens/indexScreen";
-import { BlogProvider } from "./src/context/BlogContext";
+import { Provider } from "./src/context/BlogContext";
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
-    <BlogProvider>
+    <Provider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Index">
           <Stack.Screen
@@ -18,7 +18,7 @@ function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
-    </BlogProvider>
+    </Provider>
   );
 }
 
